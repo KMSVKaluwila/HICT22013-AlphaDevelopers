@@ -30,7 +30,6 @@ export default function Landing() {
       
       {/* Hero */}
       
-      {/* How It Works */}
       
 
       {/* Testimonials */}
