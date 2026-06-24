@@ -9,6 +9,24 @@ export default function Landing() {
   return (
     <div className="landing">
       {/* Navbar */}
+      <nav className="landing__nav">
+        <div className="landing__nav-inner">
+          <div className="landing__brand">
+            <div className="landing__logo-icon">
+              <Heart size={22} color="white" fill="white" />
+            </div>
+            <span className="landing__logo-text">CarePulse</span>
+          </div>
+          <div className="landing__nav-links">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How it Works</a>
+            <a href="#testimonials">Testimonials</a>
+          </div>
+          <div className="landing__nav-actions">
+            <Button variant="primary" size="sm" icon={ArrowRight} iconRight onClick={() => navigate('/doctor-dashboard')}>Launch Demo</Button>
+          </div>
+        </div>
+      </nav>
       
       {/* Hero */}
       
