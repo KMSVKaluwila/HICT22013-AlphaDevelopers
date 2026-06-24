@@ -65,6 +65,27 @@ export default function Landing() {
       
 
       {/* CTA */}
+     <section className="landing__cta">
+        <div className="landing__cta-inner">
+          <h2 className="landing__cta-title">Ready to Take Control of Your Health?</h2>
+          <p className="landing__cta-desc">Join thousands of patients and doctors who trust CarePulse for smarter health management.</p>
+          <Button variant="primary" size="lg" icon={ArrowRight} iconRight onClick={() => navigate('/doctor-dashboard')}>
+            View Doctor Dashboard
+          </Button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="landing__footer">
+        <div className="landing__footer-inner">
+          <div className="landing__footer-brand">
+            <Heart size={20} color="var(--primary-500)" fill="var(--primary-500)" />
+            <span>CarePulse</span>
+          </div>
+          <p className="landing__footer-copy">© 2026 CarePulse. Built with ❤️ for better health.</p>
+        </div>
+      </footer>
+    </div>
       
 
       {/* Footer */}
