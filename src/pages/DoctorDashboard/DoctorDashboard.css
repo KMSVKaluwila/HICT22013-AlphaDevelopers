@@ -1,0 +1,233 @@
+/* ============================================
+   Doctor Dashboard Styles
+   ============================================ */
+
+.doc-dash {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.doc-dash__header {
+  margin-bottom: var(--space-2);
+}
+
+.doc-dash__title {
+  font-size: var(--font-2xl);
+  font-weight: var(--weight-bold);
+  color: var(--text-primary);
+}
+
+.doc-dash__subtitle {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  margin-top: var(--space-1);
+}
+
+/* Stats */
+.doc-dash__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+
+/* Grid Layout */
+.doc-dash__grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.doc-dash__card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.doc-dash__card-title {
+  font-size: var(--font-lg);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+
+.doc-dash__empty-text {
+  text-align: center;
+  color: var(--text-tertiary);
+  padding: var(--space-8) 0;
+  font-size: var(--font-sm);
+}
+
+/* Timeline */
+.doc-dash__timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 2px;
+}
+
+.doc-dash__timeline::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 64px;
+  width: 2px;
+  background: var(--border-light);
+  z-index: 0;
+}
+
+.doc-dash__timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  position: relative;
+  z-index: 1;
+  padding-bottom: var(--space-6);
+}
+.doc-dash__timeline-item:last-child { padding-bottom: 0; }
+
+.doc-dash__time {
+  width: 50px;
+  font-size: var(--font-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--text-secondary);
+  padding-top: 4px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.doc-dash__timeline-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid var(--primary-500);
+  flex-shrink: 0;
+  position: relative;
+  top: 5px;
+  box-shadow: 0 0 0 4px var(--bg-card);
+}
+
+.doc-dash__timeline-content {
+  flex: 1;
+  background: var(--gray-50);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+}
+
+.doc-dash__timeline-content:hover {
+  background: white;
+  border-color: var(--primary-300);
+  box-shadow: var(--shadow-sm);
+}
+
+.doc-dash__patient-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.doc-dash__patient-info h4 {
+  font-size: var(--font-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.doc-dash__patient-info p {
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
+}
+
+/* Table */
+.doc-dash__search {
+  width: 250px;
+}
+
+.doc-dash__search .cp-input-group {
+  margin-bottom: 0;
+}
+
+.doc-dash__table-container {
+  overflow-x: auto;
+}
+
+.doc-dash__table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.doc-dash__table th {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-xs);
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  font-weight: var(--weight-semibold);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.doc-dash__table td {
+  padding: var(--space-4);
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: middle;
+}
+
+.doc-dash__table tbody tr:hover {
+  background: var(--gray-50);
+}
+
+.doc-dash__table-patient {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.doc-dash__table-patient strong {
+  display: block;
+  color: var(--text-primary);
+  font-size: var(--font-sm);
+  margin-bottom: 2px;
+}
+
+.doc-dash__table-patient span {
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+}
+
+.doc-dash__table-btn {
+  color: var(--text-tertiary);
+  transition: color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+}
+
+.doc-dash__table-btn:hover {
+  background: var(--primary-50);
+  color: var(--primary-600);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .doc-dash__stats { grid-template-columns: repeat(2, 1fr); }
+  .doc-dash__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .doc-dash__stats { grid-template-columns: 1fr; }
+  .doc-dash__card-header { flex-direction: column; align-items: flex-start; gap: var(--space-4); }
+  .doc-dash__search { width: 100%; }
+}
