@@ -129,7 +129,7 @@ export default function Landing() {
       
 
       {/* CTA */}
-     <section className="landing__cta">
+    <section className="landing__cta">
         <div className="landing__cta-inner">
           <h2 className="landing__cta-title">Ready to Take Control of Your Health?</h2>
           <p className="landing__cta-desc">Join thousands of patients and doctors who trust CarePulse for smarter health management.</p>
